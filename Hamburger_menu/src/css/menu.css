@@ -1,0 +1,170 @@
+/* 初始化 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* 背景色 */
+    background: #232323;
+    /* 文本颜色 */
+    color: #cdcdcd;
+    /* 文本属性 */
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* div属性元素 */
+#menu-toggle{
+    /* 定义为块元素 */
+    display: block;
+    /* 元素定位-生成相对定位元素 */
+    position: relative;
+    /* 向下移动 */
+    top: 50px;
+    /* 向右移动 */
+    left: 50px;
+    /* 定义叠层顺序 */
+    z-index: 1;
+
+    /* 防止文本选取 */
+    -webkit-user-select: none;
+    user-select: none;
+
+    float: inherit;
+}
+
+/* a标签属性元素 */
+
+#menu-toggle a{
+    /* 默认文本修饰 */
+    text-decoration: none;
+
+    /* 文本颜色 */
+    /* color:#232323; */
+    transition: color 0.3 ease;
+}
+
+/* 鼠标悬浮，改变文本颜色 */
+#menu-toggle a:hover{
+    color: tomato;
+}
+
+/* 输入框款元素设置 */
+#menu-toggle input{
+    /* 块级元素 */
+    display: block;
+    /* 大小尺寸 */
+    width: 40px;
+    height: 32px;
+
+    /* 绝对i党委元素 */
+    position: absolute;
+    top: -7px;
+    left: -5px;
+    /* 鼠标形状 */
+    cursor: pointer;
+
+    /* 透明度 */
+    opacity: 0;
+    /* 层级顺序 */
+    z-index: 2;
+    /* -webkit-touch-callout: none; */
+}
+
+/* span标签属性设置 */
+#menu-toggle span{
+    /* 定义span为块级元素 */
+    display: block;
+    /* 长宽 */
+    width: 33px;
+    height: 4px;
+
+    /* 下外边距 */
+    margin-bottom: 5px;
+    /* 元素定位，相对定位 */
+    position: relative;
+    /* 背景色 */
+    background: #cdcdcd;
+
+    /* 圆角边框 */
+    border-radius: 3px;
+
+    /* 叠层顺序 */
+    z-index: 1;
+
+    transform-origin: 4px 0px;
+    /* 标签动画设置 */
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0),
+                opacity 0.55s ease;
+
+}
+
+/* span标签动画 */
+#menu-toggle span:first-child{
+    transform-origin: 0% 0%;
+}
+
+#menu-toggle span:nth-last-child(2){
+    transform-origin: 0% 100%;
+}
+
+
+#menu-toggle input:checked ~ span{
+    opacity: 1;
+    transform: rotate(45deg) translate(-2px, -1px);
+    background:#232323;
+}
+
+/* 选择input之后的第三个span标签变化*/
+#menu-toggle input:checked ~ span:nth-child(3){
+    opacity: 0;
+    transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/* 选择input之后的第二个span标签变化*/
+#menu-toggle input:checked ~ span:nth-last-child(2){
+    transform: rotate(-45deg) translate(0, -1px);
+}
+
+/* 菜单栏 内容修饰元素 */
+#menu{
+    /* 元素定位 决定定位元素 */
+    position:absolute;
+    /* 菜单栏宽度 */
+    width: 100px;
+    /* 外边距属性设置 */
+    margin: -100px 0 0 -50px;
+    /* 内边距属性 */
+    padding: 50px;
+    /* 上内边距设置 */
+    padding-top: 125px;
+    /* 背景色 */
+    background: #ededed;
+    /* 列表标记类型 */
+    list-style-type: none;
+
+    -webkit-font-smoothing: antialiased;
+
+    /* 内容伸缩 */
+    transform: translate(-100%, 0);
+    transform-origin: 0% 0%;
+    
+    transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+    /* 设置圆角菜单*/
+    border-radius: 15px 15px 15px 15px;
+}
+
+/* 菜单选项元素属性  */
+#menu li{
+    /* 边距 上内边距和下内边距都是 10*/
+    /* 右内边距和左内边距都是0 */
+    padding: 10px 0;
+    /* 文本字体大小 */
+    font-size: 22px;
+}
+
+/* 从左边划出 */
+#menu-toggle input:checked ~ ul{
+    transform: none;
+}
