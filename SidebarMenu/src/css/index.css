@@ -10,73 +10,103 @@ html, body{
     height: 100%;
 }
 
+/* body设置，背景色，字体 */
 body{
     background: #fff;
-    padding: 0;
-    margin: 0;
     font-family: 'Varela Round', sans-serif;
 }
 
+/* 头部块， */
 .header{
     display: block;
+    /* 上下外边距为0，内边距浏览器自己计算 */
     margin: 0 auto;
+    /* 宽度，段落最大宽度 */
     width: 100%;
     max-width: 100%;
+    /* 阴影默认 */
     box-shadow: none;
+    /* 背景颜色 */
     background-color: #FC466B;
+    /* 位置固定 */
     position: fixed;
+    /* 60的高度，并提高权重 */
     height: 60px!important;
+    /* 内容异常。内容不可见 */
     overflow: hidden;
+    /* 图像叠加属性 */
     z-index: 10;
 }
 
+/* 登录注册按钮属性设置 */
 .login_tab{
     display: block;
     float:right;
     margin-right: 25px;
     margin-top: 20px;
+    /* 文本颜色-前景色 */
     color: #fff;
 }
 .login_tab a{
+    /* 文本前景色 */
     color: #fff;
+    /* 文本字体 */
     font-family: 'Varela Round', sans-serif;
+    /* 字体粗细-粗体 */
     font-weight: bold;
+    /* 鼠标变小手 */
     cursor: pointer;
+    /* 取消下划线 */
     text-decoration: none;
 }
 
-
+/* 内容块 父元素设置*/
 .main{
     margin: 0 auto;
     display: block;
     height: 100%;
-    margin-top: 60px;
+    margin-top: 100px;
 }
 
+/* 内容快 子元素*/
 .mainInner{
     display: table;
     height: 100%;
     width: 100%;
     text-align:center;
 }
+/* 内容块文本块元素设置 */
 .mainInner div{
+    /* 作为一个表格单元格显示 */
     display: table-cell;
+    /* 此元素放置在父元素的中部 */
     vertical-align: middle;
+    /* 文本大小 */
     font-size: 3em;
+    /* 文本粗体字 */
     font-weight: bold;
+    /* 字符间的空白 */
     letter-spacing: 1.25px;
 
 }
 
+/* 菜单栏父级元素设置 */
 #sidebarMenu{
+    /* 高度百分百 */
     height: 100%;
+    /* 位置固定 */
     position: fixed;
+    /* 左边位置 */
     left: 0;
+    /* 宽度 */
     width: 250px;
+    /* 向下移动 */
     margin-top: 60px;
+    /* 左右滑动伸缩，值与宽度相同可隐藏 */
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background: linear-gradient(180deg, #FC466B 0%, #3F5EFB 100%);
+    /* 背景色，渐变 渐变轴180 从红到绿*/
+    background: linear-gradient(180deg, #FC466B 10%, #3F5EFB 100%);
 }
 
 .sidebarMenuInner{
@@ -108,6 +138,7 @@ body{
     text-decoration: none;
 }
 
+/* 点击算则狂回复隐藏， 改变坐标*/
 input[type="checkbox"]:checked ~ #sidebarMenu{
     transform: translateX(0);
 }
@@ -151,9 +182,11 @@ input[type=checkbox]{
     margin-top: 3px;
 }
 
+/* 点击选择框，改变label内三个div属性， */
 input[type=checkbox]:checked ~ .sidebarIconToggle > .horizontal{
     transition: all 0.3s;
     box-sizing:border-box;
+    /* 隐藏 */
     opacity: 0;
 
 } 
