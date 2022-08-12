@@ -1,0 +1,64 @@
+/* 初始化 */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* body 设置字体和背景颜色 */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background: -webkit-linear-gradient(bottom left, #fff, blue 300%);
+}
+
+/* header居中 */
+.header{
+    text-align: center;
+    
+}
+
+/* header内容设置， 文字颜色，文字大小，文字加粗，上下间距 */
+.title_text > p{
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    margin: 10px 0 20px 0;
+}
+
+/* 设置块级元素，文字大小，文字加粗，居中，盒子， 盒子大小*/
+.main{
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0 auto;
+    border: 0;
+    width: 70%;
+}
+
+.content-txt >p{
+    margin-top: 10px;
+    text-align: center;
+}
+/* 图片上下间距，居中，阴影 */
+.content-txt > img{
+    display: block;
+    margin: 20px auto;
+    box-shadow: 10px 10px 40px rgba(53, 196, 221, 0.925);
+}
+
+
+.autor{
+    margin-left: 80%;
+    font-size: 30px;
+    color: #9bf3bc;
+}
+.end {
+    /* margin-top: 120px; */
+    border: 0 solid #fff;
+    text-align: center; 
+    margin: 0 auto;
+    width: 70%;
+    box-shadow: 10px 10px 10px rgb(201, 238, 230);
+    
+    position: relative;
+    bottom: -200px;
+}
