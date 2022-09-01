@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>注册表单</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <h1>注册表单</h1>
+    <p>请在这张表格上填写所需信息</p>
+    <form action="https://register-demo.freecodecamp.org">
+        <fieldset>
+            <label>姓： <input type="text" name="first-name" /required></label>
+            <label>名： <input type="text" name="last-name" /required></label>
+            <label>邮箱： <input type="email" name="email" /required></label>
+            <label>密码： <input type="password" name="password" pattern="[a-z0-9]{8，}" /required></label>
+        </fieldset>
+        <fieldset>
+            <label><input type="radio" name="account-type" class="inline">个人账号</label>
+            <label><input type="radio" name="account-type" class="inline">公司账号</label>
+            <label><input type="checkbox" name="terms" class="inline">我接受<a href="https://www.freecodecamp.org/news/terms-of-service/">条款</a></label>
+        </fieldset>
+
+        <fieldset>
+            <label>上传图片文件: <input type="file"></label>
+            <label>请输入年龄: <input type="number" min="13" max="120"></label>
+            <label>
+                请选择渠道:
+                <select name="referrer">
+                    <option value="">请选择</option>
+                    <option value="1">新闻</option>
+                    <option value="2">视频</option>
+                    <option value="3">论坛</option>
+                    <option value="4">其他</option>
+                </select>
+            </label>
+            <label>
+                请简单描述:
+                <textarea name="bio" cols="30" rows="10" placeholder="我喜欢在户外写代码。。。。。"></textarea>
+            </label>
+        </fieldset>
+        <input type="submit" value="提交">
+    </form>
+</body>
+</html>
