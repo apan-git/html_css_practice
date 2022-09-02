@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>调查表</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1 id="title">调查表</h1>
+    <p id="description">请按需求填写里面内容</p>
+    <form id="survey-form" action="">
+
+        <label id="name-label">
+            姓名: <input id="name" type="text" placeholder="请输入姓名。。" required />
+        </label>
+        <label id="email-label">
+            邮箱: <input id="email" type="email" placeholder="请输入邮箱。。" required />
+        </label>
+        <label id="number-label">
+            年龄: <input id="number" type="number" min="13" max="120" placeholder="请输入年龄。。。" required />
+        </label>
+
+        <span>请选择您目前的职业:</span>
+        <select id="dropdown">
+        <option value="">请选择</option>
+        <option value="1">学生</option>
+        <option value="2">上班族</option>
+        <option value="3">自由工作者</option>
+        <option value="4">其他</option>
+        </select>
+
+        <br><br>
+        <span>你是否愿意推荐你的朋友来这里学习</span>
+        <label><input type="radio" name="account-type" value="0" class="inline">肯定</label>
+        <label><input type="radio" name="account-type" value="1" class="inline">也许</label>
+        <label><input type="radio" name="account-type" value="2" class="inline">不会</label>
+        <br><br>
+        <span>请选择您需要我们改进的地方。</span>
+        <label><input type="checkbox" value="community">社区</label>
+        <label><input type="checkbox" value="forum">论坛</label>
+        <label><input type="checkbox" value="data-visualization">数据可视化</label>
+        <label><input type="checkbox" value="additional-courses">额外课程</label>
+
+        <span>请详细描述。。。。</span>
+        <textarea name="comment" id="comment" cols="30" rows="10" placeholder="请详细描述。。"></textarea>
+
+        <input type="submit" name="submit" id="submit" value="提交">
+    </form>
+    
+</body>
+</html>
